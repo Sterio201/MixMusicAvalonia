@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="MusicMixAvalonia.MainWindow"
+        Title="MusicMixAvalonia">
+    <Grid RowDefinitions="Auto, *, Auto">
+		<Grid Grid.Row="0" RowDefinitions="Auto, Auto" ColumnDefinitions="Auto, Auto" Background="Red" Height="120">
+			
+			<Grid Grid.Row="0" Grid.Column="0" Margin="10, 10, 0, 0">
+				<Button Background="White" Height="40" Width="340" FontSize="20" x:Name="ChoiseFolderMix">Выбрать папку для смешивания</Button>
+			</Grid>
+			
+			<Grid Grid.Row="0" Grid.Column="1" Margin="10,10,0,0">
+				<Label FontSize="20" x:Name="NameMixFolder">Папка</Label>
+			</Grid>
+			
+			<Grid Grid.Row="1" Margin="10, 10, 0, 0">
+				<Button Background="White" Height="40" Width="340" FontSize="20" x:Name="ChoiseFolders">Выбрать папки музыки</Button>
+			</Grid>
+		</Grid>
+		
+		<Grid Grid.Row="1">
+			<ScrollViewer>
+				<ListBox x:Name="ListBox" Background="White"/>
+			</ScrollViewer>
+		</Grid>
+		
+		<Grid Grid.Row="2" Background="Red" Height="50">
+			<Button Background="White" Height="35" Width="160" FontSize="20" Margin="0, 0, 0, 0" x:Name="Delete">Удалить папку</Button>
+			<Button Background="White" Height="35" Width="130" FontSize="20" Margin="180, 0, 0, 0" x:Name="Upload">Выгрузить</Button>
+		</Grid>
+	</Grid>
+</Window>
